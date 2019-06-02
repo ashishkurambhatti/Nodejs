@@ -1,0 +1,102 @@
+[sushantmathpati@instance-1 ~]$ sudo yum update
+
+[sushantmathpati@instance-1 ~]$ sudo yum install nodejs
+
+sushantmathpati@instance-1 ~]$ sudo yum install git
+
+[sushantmathpati@instance-1 ~]$ git clone https://github.com/SushantMathpati/sin.git
+
+[sushantmathpati@instance-1 ~]$ ls
+
+sushantmathpati@instance-1 ~]$ cd sin
+
+[sushantmathpati@instance-1 sin]$ ls
+
+[sushantmathpati@instance-1 ~]$ node app.js
+[sushantmathpati@instance-1 ~]$ sudo docker images
+
+
+[sushantmathpati@instance-1 ~]$ sudo yum install docker
+
+
+[sushantmathpati@instance-1 ~]$ sudo systemctl start docker
+[sushantmathpati@instance-1 ~]$ sudo systemctl status docker
+[sushantmathpati@instance-1 ~]$ sudo systemctl enable docker
+
+[sushantmathpati@instance-1 ~]$ sudo docker images
+
+
+
+sushantmathpati@instance-1 ~]$ sudo docker ps
+[sushantmathpati@instance-1 ~]$ sudo docker run hello-world
+[sushantmathpati@instance-1 ~]$ sudo docker pull mysql
+ushantmathpati@instance-1 ~]$ sudo docker images
+
+[sushantmathpati@instance-1 ~]$ sudo docker pull nginx
+[sushantmathpati@instance-1 ~]$ sudo docker images
+[sushantmathpati@instance-1 ~]$ sudo docker run --name webserver -d -p 8080:80 nginx:latest
+
+
+[sushantmathpati@instance-1 ~]$ git clone https://github.com/RaviTambade/containerapps.git
+
+sushantmathpati@instance-1 ~]$ ls
+[sushantmathpati@instance-1 ~]$ cd containerapps
+[sushantmathpati@instance-1 containerapps]$ cd nodeapp
+
+[sushantmathpati@instance-1 nodeapp]$ ls
+
+[sushantmathpati@instance-1 nodeapp]$ sudo docker build -t nodeapp .
+
+
+[sushantmathpati@instance-1 nodeapp]$ sudo docker run -p 8081:8081 nodeapp
+
+
+[sushantmathpati@instance-1 containerjavaapp]$ ls
+Dockerfile  Sample.java
+[sushantmathpati@instance-1 containerjavaapp]$ sudo docker build -t containerjavaapp .
+Sending build context to Docker daemon 3.072 kB
+Step 1/5 : FROM java:8
+Trying to pull repository docker.io/library/java ... 
+8: Pulling from docker.io/library/java
+5040bd298390: Pull complete 
+fce5728aad85: Pull complete 
+76610ec20bf5: Pull complete 
+60170fec2151: Pull complete 
+e98f73de8f0d: Pull complete 
+11f7af24ed9c: Pull complete 
+49e2d6393f32: Pull complete 
+bb9cdec9c7f3: Pull complete 
+Digest: sha256:c1ff613e8ba25833d2e1940da0940c3824f03f802c449f3d1815a66b7f8c0e9d
+Status: Downloaded newer image for docker.io/java:8
+ ---> d23bdf5b1b1b
+Step 2/5 : COPY . /var/www/java
+ ---> fd21f61cf1d9
+Removing intermediate container ec15b4274bae
+Step 3/5 : WORKDIR /var/www/java
+ ---> b52667394e4a
+Removing intermediate container 40e93aac20ea
+Step 4/5 : RUN javac Sample.java
+ ---> Running in 20578d05b4ac
+ ---> cfc96ac00ba3
+Removing intermediate container 20578d05b4ac
+Step 5/5 : CMD java Sample
+ ---> Running in 84a702ffe036
+ ---> 102d85735964
+Removing intermediate container 84a702ffe036
+Successfully built 102d85735964
+[sushantmathpati@instance-1 containerjavaapp]$ sudo docker run containerjavaapp .
+container_linux.go:235: starting container process caused "exec: \".\": executable file not found in $PATH"
+/usr/bin/docker-current: Error response from daemon: oci runtime error: container_linux.go:235: starting container 
+process caused "exec: \".\": executable file not found in $PATH".
+[sushantmathpati@instance-1 containerjavaapp]$ sudo docker run containerjavaapp
+This is java application by using docker 
+[sushantmathpati@instance-1 containerjavaapp]$ c^C
+[sushantmathpati@instance-1 containerjavaapp]$ ^C
+[sushantmathpati@instance-1 containerjavaapp]$ 
+
+
+
+
+
+
+

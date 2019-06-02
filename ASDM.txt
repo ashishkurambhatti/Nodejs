@@ -1,0 +1,63 @@
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ASDM $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+* Create instance with Centios 7
+* click on SSH (open Centos7 terminal)
+* sudo yum update 
+* npm install
+* sudo yum install nodejs
+* sudo yum install git
+* sudo yum install docker
+* make directory (e.g mkdir DAC)
+* ls
+* cd DAC
+* create file (e.g vim hello.js)
+* press i (insert)
+* write code in file
+* after writing then press :wq for exit from file
+* node hello.js for run file
+* rm -rf file_name (for removing directory)
+
+## steps for push file to gitHub
+
+* create repository on github
+* git init 
+* git add file_name
+* git -m commit "first commit"
+    set config by username(from github) & password(githubpassword)
+* git config --global user.email "you@example.com"
+* git config --global user.name "Your Name"
+* git -m commit "first commit"
+* git remote add origin https://github.com/AshishRPatil146/sagar.git
+* git push -u origin master
+* then enter username & password as u set earlier
+
+
+## Steps for get file from github to our VM
+
+* git clone path from github (e.g git hub https://github.com/AshishRPatil146/sagar.git)
+* change directory (e.g cd sagar)
+* run file (e.g simple.js)
+* for run on browser (enter instance external ip:port number that you use in file)
+
+## steps for docker
+
+* docker -v (check version of docker)
+* sudo docker images (it will show docker images) 
+* sudo docker ps (it will show running docker images)
+* sudo systemctl start docker (for docker start)
+* sudo systemctl status docker (check status of docker)
+* sudo systemctl enable docker (docker enable)
+
+* sudo docker pull image_name (e.g sudo docker pull hello-world)
+* sudo docker run image_name (e.g sudo docker run hello-world )
+
+* sudo docker pull nginx	
+* docker run --name webserver -d -p 8080:80 nginx:latest (for run docker images)
+  (for acces page on browser tpye http://external:8080)
+ 
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Best Of Luck $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+
